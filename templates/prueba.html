@@ -1,0 +1,27 @@
+<!doctype html>
+<title>About men and women</title>
+<link rel=stylesheet type=text/css href='{{ url_for('static',filename='style_lulu.css')}}'>
+<div class=page>
+  <h1>About men and women</h1>
+  <div class=metanav>
+
+    <h4>
+      You will be asked {{num}}  questions.
+      Then we will show you the data.
+    </h4>
+
+    <form id='prueba' method='post' action='index_m' >
+      <p>
+    Name: <input type='text' name='name_m' />
+      </p>
+      <p>
+    Age: <input type='text' name='age_m' />
+      </p>
+      <p>
+    <input type='submit' value='Submit_m' />
+      </p>
+    </form>
+
+  </div>
+</div>
+</html>

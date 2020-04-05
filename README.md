@@ -1,5 +1,4 @@
 # Flask on Heroku
-# Aqui jugando a hacer modificaciones para subirlas despues y se me ocurrio escribir una chorrada en el readme
 
 This project is intended to help you tie together some important concepts and
 technologies from the 12-day course, including Git, Flask, JSON, Pandas,
