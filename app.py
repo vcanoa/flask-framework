@@ -4,7 +4,6 @@ import requests
 import json
 from pandas import *
 import pandas
-import matplotlib.pyplot as plt
 from datetime import datetime as dt
 from bokeh.io import output_file, show
 from bokeh.plotting import figure
