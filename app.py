@@ -42,7 +42,7 @@ app.questions['There are more men or women in the world?']=('men','women')
 app.nquestions=len(app.questions)
 # should be 1
 
-@app.route('/index_m',methods=['GET','POST'])
+@app.route('/',methods=['GET','POST'])
 def index_m():
 #   return 'This is information about health'
     nquestions=app.nquestions
@@ -106,5 +106,5 @@ def next_m2():  #can't have two functions with the same name
 
 
 if __name__ == '__main__':
- #app.run(port=33507)
- app.run(debug=True)
+ app.run(port=33507)
+ #app.run(debug=True)
