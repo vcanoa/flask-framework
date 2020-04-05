@@ -8,6 +8,8 @@ from datetime import datetime as dt
 from bokeh.io import output_file, show
 from bokeh.plotting import figure
 from bokeh.models import DatetimeTickFormatter
+from bokeh.resources import CDN
+from bokeh.embed import file_html
 
 # male female population
 #we read data from an API
@@ -64,9 +66,9 @@ def index_m():
 @app.route('/main_m')
 def main_m(): 
       if len(app.questions)==0 :        
-           #return show(p)
-        #  return show(p)
-       return render_template('end.html'),show(p)
+                html=file_html(p,CDN,"Women and men")
+                return html
+          #   return render_template('end.html'), show(p)
       else:
           return redirect('/next_m')
    
