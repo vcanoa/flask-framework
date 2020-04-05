@@ -1,0 +1,6 @@
+Name: d
+Age: 3
+
+There are more men or women in the world?
+women
+

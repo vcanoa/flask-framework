@@ -24,6 +24,7 @@ for row in list_data:
           df=df.append({'date': row[0],'female': row[1],'male': row[2]}, ignore_index=True)
 
 df['date']=to_datetime(df.date)
+#output_file("sample.html")
 p = figure(x_axis_type="datetime", title="Women and Men", plot_height=350, plot_width=800)
 p.xgrid.grid_line_color=None
 p.ygrid.grid_line_alpha=0.5
@@ -62,11 +63,12 @@ def index_m():
  
 @app.route('/main_m')
 def main_m(): 
-      if len(app.questions)==0 :
-          return show(p)
-         #return render_template('end.html')
+      if len(app.questions)==0 :        
+           #return show(p)
+        #  return show(p)
+       return render_template('end.html'),show(p)
       else:
-         return redirect('/next_m')
+          return redirect('/next_m')
    
 #####################################
 ## IMPORTANT: I have separated /next_lulu INTO GET AND POST
@@ -106,5 +108,5 @@ def next_m2():  #can't have two functions with the same name
 
 
 if __name__ == '__main__':
- app.run(port=33507)
- #app.run(debug=True)
+# app.run(port=33507)
+ app.run(debug=True)
